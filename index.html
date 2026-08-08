@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="JMR Books">
+<title>Safe Ground | JMR Books</title>
+<meta name="description" content="Safe Ground: Growing up French in Salva Terra — a memoir by Jean Récapet.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">JMR BOOKS</div>
+    <ul>
+      <li><a href="#author">The author</a></li>
+      <li><a href="#book">The book</a></li>
+      <li><a href="#find">Find it</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============================================================
+     HERO = ABOUT THE AUTHOR — the author intro doubles as the hero
+     ============================================================ -->
+<section id="author" class="hero-author">
+  <div class="wrap hero-grid">
+    <img src="assets/author.png" alt="Portrait of Jean Récapet" class="author-photo" style="width: 400px; height: auto;" floating="left">
+    
+
+      <div class="author-copy">
+        <p><h1>About Author</h1></p>
+        <p>Jean Récapet arrived in the United States from southwestern France on September 5, 1977, and has called America home ever since. To mark fifty years in his adopted country, he looks back on the first two decades of his life in Béarn, Sauveterre, and the Pyrénées in this vivid coming-of-age memoir.</p>
+        <p>After a few years in college, he built a long career in management in the service industry — from restaurants and country clubs to bookstores — where his love of people, stories, and hospitality found a natural home.</p>
+        <p>Now, he offers this book as a gift and a thank-you to all those on both sides of the Atlantic who have shaped his life. He lives in Connecticut with his partner Tracy and their two cats.</p>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-ghost">About the book</a>
+        <a href="#find" class="btn">Find the book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT THE BOOK — his life's work, with the cover front and center
+     ============================================================ -->
+<section id="book" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">His life's work</p>
+    <div class="book-grid">
+      <div class="book-copy">
+        <div>
+      <p class="eyebrow">A memoir by Jean Récapet</p>
+      <h1 class="hero-title">Safe Ground</h1>
+      <p class="hero-subtitle">Growing up French in Salva Terra</p>
+      <p class="hero-tagline">&ldquo;I feel French in my heart. But I am American in my guts.&rdquo;</p>
+        <p>Safe Ground is a memoir of childhood, memory, and belonging, set in the medieval town of Sauveterre-de-Béarn in southwestern France. Born into the long shadow of World War II and raised among family stories, village legends, riverbanks, ruined castles, shopkeepers, neighbors, and lifelong friends, Jean Récapet looks back on the twenty years of his life with tenderness, humor, and hard-won clarity.</p>
+        <p>From the tidal waters of the Garonne in Bordeaux to the gave d'Oloron below Magendie, from boarding school and wartime scars to boyhood mischief, fear, wonder, and freedom, this memoir preserves a vanished world that shaped him before America became home.</p>
+        <p>At once intimate and historical, Safe Ground is a love letter to family, friendship, place, and the memories that remain bright enough to guide us across a lifetime.</p>
+       <img id="back cover img" src="assets/back_cover.png" alt="Safe Ground book cover — a stone bridge and medieval tower in Sauveterre-de-Béarn" class="book-cover" style="width: 40px; height: auto;" imgfloating="right">
+        </div>
+      </div>
+        </div>
+</section>
+
+<!-- ============================================================
+     EXCERPT
+     ============================================================ -->
+<section class="excerpt">
+  <div class="wrap">
+    <div class="framed">
+      <blockquote>
+        &ldquo;The French part is a secret garden of memories, and this book is about that. They are souvenirs kept in a bubble; a time capsule I carry as a talisman for rainy days. They remain bright, vivid, and unchanged.&rdquo;
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FIND IT — three retailer cards, filled in by script.js
+     EASY EDIT: change links in the BUY_LINKS object in script.js
+     ============================================================ -->
+<section id="find" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Where to find it</p>
+    <h2 class="center">Get your copy</h2>
+    <p class="center find-intro">Safe Ground is available in paperback wherever you like to shop.</p>
+    <div class="find-grid" id="find-grid">
+      <!-- cards are rendered by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT — social links + direct email
+     EASY EDIT: change SOCIAL_LINKS and RECIPIENT_EMAIL in script.js
+     ============================================================ -->
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow center">Contact</p>
+    <h2 class="center">Get in touch</h2>
+    <ul class="social-row" id="social-row">
+      <!-- icons rendered by script.js -->
+    </ul>
+
+    <form class="contact-form" id="contact-form">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn">Email Jean</button>
+      <p class="form-note">Opens your email app with this message, addressed to Jean at <span id="email-address"></span>.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="publisher">JMR Books</div>
+    <p class="copyright">&copy; 2026 Jean Récapet. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

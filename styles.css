@@ -1,0 +1,357 @@
+/* ==================================================================
+   EASY-EDIT COLOR PALETTE
+   Change any hex value here and it updates the whole site.
+   Colors were sampled directly from the book cover.
+   ================================================================== */
+:root {
+  --ink:        #2A1810;   /* dark text / dark backgrounds */
+  --gold:       #B8790E;   /* primary accent (darkened cover gold, readable as text) */
+  --gold-bright:#F0B01E;   /* bright gold, used on dark backgrounds only */
+  --sepia:      #C9935C;   /* secondary accent */
+  --page-bg:    #F3E9D6;   /* main page background (soft parchment) */
+  --alt-bg:     #E9DBB8;   /* alternating section background */
+  --card-bg:    #FBF6EC;   /* card surface */
+  --border:     #D8C49A;   /* hairline borders */
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--page-bg);
+  line-height: 1.65;
+  font-size: 17px;
+}
+#back cover img {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-right: 20px;
+}
+img { max-width: 100%; display: block; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section { padding: 96px 0; }
+.alt { background: var(--alt-bg); }
+.center { text-align: center; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+h2 { font-size: 34px; margin-bottom: 20px; }
+
+a { color: var(--gold); }
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* ---------- signature motif: gold-framed box, echoes the cover ---------- */
+.framed {
+  border: 2px solid var(--gold);
+  padding: 40px;
+  position: relative;
+}
+.framed::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+}
+
+/* ---------- nav ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--page-bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .brand {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+nav .brand-sub {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+nav ul { list-style: none; display: flex; gap: 28px; }
+nav a { color: var(--ink); text-decoration: none; font-size: 15px; }
+nav a:hover { color: var(--gold); }
+
+/* ---------- hero = about the author ---------- */
+.hero-author {
+  padding: 88px 0 96px;
+  background: linear-gradient(180deg, var(--page-bg) 0%, var(--alt-bg) 100%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.hero-grid .author-photo {
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(42, 24, 16, 0.14);
+}
+.hero-title {
+  font-size: 52px;
+  margin-top: 6px;
+}
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 21px;
+  color: var(--gold);
+  margin-top: 8px;
+}
+.hero-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 19px;
+  margin-top: 20px;
+}
+.hero-author .author-copy {
+  margin-top: 24px;
+}
+.hero-author .author-copy p + p { margin-top: 14px; }
+.hero-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--ink);
+  color: var(--gold-bright);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn:hover { opacity: 0.85; }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+
+/* ---------- about the book ---------- */
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 56px;
+  align-items: start;
+}
+.book-subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+.book-copy p + p { margin-top: 16px; }
+.book-cover {
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px rgba(42, 24, 16, 0.18);
+}
+
+/* ---------- excerpt ---------- */
+.excerpt blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 46ch;
+  margin: 0 auto;
+}
+.excerpt .framed { max-width: 640px; margin: 0 auto; }
+
+/* ---------- find it: three retailer cards ---------- */
+.find-intro { max-width: 50ch; margin: 0 auto 48px; }
+.find-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.find-card {
+  flex: 1 1 260px;
+  max-width: 300px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.find-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(42, 24, 16, 0.12);
+}
+.find-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--alt-bg);
+  color: var(--gold);
+}
+.find-card.alt-card .find-icon { background: var(--page-bg); }
+.find-icon svg { width: 28px; height: 28px; }
+.find-name {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.find-cta {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ---------- contact ---------- */
+.social-row {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 32px 0 48px;
+  flex-wrap: wrap;
+}
+.social-row a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 15px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.social-row a:hover { border-color: var(--gold); color: var(--gold); }
+.social-row svg { width: 18px; height: 18px; }
+
+.contact-form {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--alt-bg);
+  border: 1px solid var(--border);
+  padding: 40px 32px;
+}
+.field { margin-bottom: 20px; }
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--ink);
+}
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+.field textarea { resize: vertical; }
+.contact-form .btn { width: 100%; }
+.form-note {
+  margin-top: 14px;
+  font-size: 14px;
+  opacity: 0.7;
+  text-align: center;
+}
+.form-note span { font-weight: 600; opacity: 1; }
+
+/* ---------- footer ---------- */
+footer {
+  background: var(--ink);
+  color: var(--page-bg);
+  padding: 40px 0;
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+footer .publisher {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: var(--gold-bright);
+}
+footer .copyright { font-size: 13px; opacity: 0.65; }
+
+/* ---------- mobile ---------- */
+@media (max-width: 760px) {
+  section { padding: 64px 0; }
+  .hero-author { padding: 56px 0 64px; }
+  .hero-title { font-size: 36px; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-grid .author-photo { width: 160px; }
+  .book-grid { grid-template-columns: 1fr; }
+  .book-grid .book-cover { order: -1; max-width: 280px; margin: 0 auto; }
+  nav ul { gap: 14px; }
+  h2 { font-size: 27px; }
+  .excerpt blockquote { font-size: 21px; }
+  footer .wrap { flex-direction: column; text-align: center; }
+}
