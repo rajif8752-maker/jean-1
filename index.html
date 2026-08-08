@@ -1,139 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="JMR Books">
-<title>Safe Ground | JMR Books</title>
-<meta name="description" content="Safe Ground: Growing up French in Salva Terra — a memoir by Jean Récapet.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jean Récapet | JMR Books">
+  <title>Safe Ground | A Memoir by Jean Récapet</title>
+  <meta name="description" content="Safe Ground: Growing up French in Salva Terra — an intimate coming-of-age memoir by Jean Récapet exploring memory, belonging, Sauveterre-de-Béarn, and a 50-year journey from France to America.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="brand">JMR BOOKS</div>
-    <ul>
-      <li><a href="#author">The author</a></li>
-      <li><a href="#book">The book</a></li>
-      <li><a href="#find">Find it</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Custom Cursor Followers (Desktop Only) -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
 
-<!-- ============================================================
-     HERO = ABOUT THE AUTHOR — the author intro doubles as the hero
-     ============================================================ -->
-<section id="author" class="hero-author">
-  <div class="wrap hero-grid">
-    <img src="assets/author.png" alt="Portrait of Jean Récapet" class="author-photo" style="width: 400px; height: auto;" floating="left">
-    
+  <!-- Grain Atmosphere Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
 
-      <div class="author-copy">
-        <p><h1>About Author</h1></p>
-        <p>Jean Récapet arrived in the United States from southwestern France on September 5, 1977, and has called America home ever since. To mark fifty years in his adopted country, he looks back on the first two decades of his life in Béarn, Sauveterre, and the Pyrénées in this vivid coming-of-age memoir.</p>
-        <p>After a few years in college, he built a long career in management in the service industry — from restaurants and country clubs to bookstores — where his love of people, stories, and hospitality found a natural home.</p>
-        <p>Now, he offers this book as a gift and a thank-you to all those on both sides of the Atlantic who have shaped his life. He lives in Connecticut with his partner Tracy and their two cats.</p>
-      </div>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
 
-      <div class="hero-actions">
-        <a href="#book" class="btn btn-ghost">About the book</a>
-        <a href="#find" class="btn">Find the book</a>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- ============================================================
+       NAVIGATION HEADER
+       ============================================================ -->
+  <header id="main-header">
+    <nav>
+      <a href="#hero" class="brand-wrapper">
+        <span class="brand-title">JMR BOOKS</span>
+        <span class="brand-sub">JEAN RÉCAPET</span>
+      </a>
 
-<!-- ============================================================
-     ABOUT THE BOOK — his life's work, with the cover front and center
-     ============================================================ -->
-<section id="book" class="alt">
-  <div class="wrap">
-    <p class="eyebrow">His life's work</p>
-    <div class="book-grid">
-      <div class="book-copy">
-        <div>
-      <p class="eyebrow">A memoir by Jean Récapet</p>
-      <h1 class="hero-title">Safe Ground</h1>
-      <p class="hero-subtitle">Growing up French in Salva Terra</p>
-      <p class="hero-tagline">&ldquo;I feel French in my heart. But I am American in my guts.&rdquo;</p>
-        <p>Safe Ground is a memoir of childhood, memory, and belonging, set in the medieval town of Sauveterre-de-Béarn in southwestern France. Born into the long shadow of World War II and raised among family stories, village legends, riverbanks, ruined castles, shopkeepers, neighbors, and lifelong friends, Jean Récapet looks back on the twenty years of his life with tenderness, humor, and hard-won clarity.</p>
-        <p>From the tidal waters of the Garonne in Bordeaux to the gave d'Oloron below Magendie, from boarding school and wartime scars to boyhood mischief, fear, wonder, and freedom, this memoir preserves a vanished world that shaped him before America became home.</p>
-        <p>At once intimate and historical, Safe Ground is a love letter to family, friendship, place, and the memories that remain bright enough to guide us across a lifetime.</p>
-       <img id="back cover img" src="assets/back_cover.png" alt="Safe Ground book cover — a stone bridge and medieval tower in Sauveterre-de-Béarn" class="book-cover" style="width: 40px; height: auto;" imgfloating="right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#story">The Story</a></li>
+        <li><a href="#interactive-book">The Book</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#themes">Themes</a></li>
+        <li><a href="#excerpt">Excerpt</a></li>
+        <li><a href="#author">About Jean</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#purchase" class="btn-nav-cta">Get the Book</a>
+
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       1 & 2. CINEMATIC HERO SECTION
+       ============================================================ -->
+  <section id="hero" class="hero-section">
+    <div class="wrap hero-grid">
+      
+      <div class="hero-content reveal-up">
+        <div class="author-tag-badge">
+          <span>A Memoir by Jean Récapet</span>
+        </div>
+
+        <h1 class="hero-title-main">
+          Safe Ground
+          <span>Growing up French in Salva Terra</span>
+        </h1>
+
+        <div class="hero-quote-box">
+          <blockquote>
+            &ldquo;I feel French in my heart. But I am American in my guts.&rdquo;
+          </blockquote>
+        </div>
+
+        <p class="hero-subtitle">
+          An intimate journey across memory, childhood, and belonging in southwestern France—and fifty years of life in America.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#interactive-book" class="btn-primary">
+            <span>Discover the Book</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#excerpt" class="btn-secondary">
+            <span>Read an Excerpt</span>
+          </a>
         </div>
       </div>
+
+      <!-- 3D Book Interactive Mockup -->
+      <div class="hero-book-stage reveal-scale delay-2" id="hero-book-stage">
+        <div class="book-container-3d" id="hero-book-3d">
+          <div class="book-cover-front"></div>
+          <div class="book-spine">
+            <div class="spine-logo">JMR</div>
+            <div class="spine-text">SAFE GROUND — JEAN RÉCAPET</div>
+            <div class="spine-logo">2026</div>
+          </div>
+          <div class="book-pages-right"></div>
+          <div class="book-cover-back"></div>
         </div>
-</section>
-
-<!-- ============================================================
-     EXCERPT
-     ============================================================ -->
-<section class="excerpt">
-  <div class="wrap">
-    <div class="framed">
-      <blockquote>
-        &ldquo;The French part is a secret garden of memories, and this book is about that. They are souvenirs kept in a bubble; a time capsule I carry as a talisman for rainy days. They remain bright, vivid, and unchanged.&rdquo;
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     FIND IT — three retailer cards, filled in by script.js
-     EASY EDIT: change links in the BUY_LINKS object in script.js
-     ============================================================ -->
-<section id="find" class="alt">
-  <div class="wrap">
-    <p class="eyebrow">Where to find it</p>
-    <h2 class="center">Get your copy</h2>
-    <p class="center find-intro">Safe Ground is available in paperback wherever you like to shop.</p>
-    <div class="find-grid" id="find-grid">
-      <!-- cards are rendered by script.js -->
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     CONTACT — social links + direct email
-     EASY EDIT: change SOCIAL_LINKS and RECIPIENT_EMAIL in script.js
-     ============================================================ -->
-<section id="contact">
-  <div class="wrap">
-    <p class="eyebrow center">Contact</p>
-    <h2 class="center">Get in touch</h2>
-    <ul class="social-row" id="social-row">
-      <!-- icons rendered by script.js -->
-    </ul>
-
-    <form class="contact-form" id="contact-form">
-      <div class="field">
-        <label for="name">Your name</label>
-        <input type="text" id="name" name="name" required>
+        <div class="book-shadow-cast"></div>
       </div>
-      <div class="field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3 & 8. INTERACTIVE 3D BOOK SHOWCASE SECTION
+       ============================================================ -->
+  <section id="interactive-book" class="book-showcase-section">
+    <div class="wrap">
+      <div class="eyebrow center reveal-up">Interactive 3D Edition</div>
+      <h2 class="center reveal-up delay-1">Explore the Physical Book</h2>
+      <p class="center reveal-up delay-2" style="max-width: 600px; margin: 0 auto;">
+        Click and drag to rotate the 3D volume of <em>Safe Ground</em> in real time. Inspect the cover art, spine, and paper edge craft.
+      </p>
+
+      <div class="showcase-stage-container reveal-scale delay-3">
+        <div class="interactive-3d-wrapper" id="interactive-3d-wrapper">
+          <div class="interactive-book-3d" id="interactive-book-3d">
+            <div class="book-cover-front"></div>
+            <div class="book-spine">
+              <div class="spine-logo">JMR</div>
+              <div class="spine-text">SAFE GROUND — JEAN RÉCAPET</div>
+              <div class="spine-logo">MEMOIR</div>
+            </div>
+            <div class="book-pages-right"></div>
+            <div class="book-cover-back"></div>
+          </div>
+        </div>
+
+        <div class="drag-instruction-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          <span>Click & Drag to Rotate 360°</span>
+        </div>
+
+        <!-- Book Specs Grid -->
+        <div class="specs-grid reveal-up delay-4" style="width: 100%;">
+          <div class="spec-box">
+            <div class="spec-label">Setting</div>
+            <div class="spec-value">Sauveterre-de-Béarn</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label">Memoir Period</div>
+            <div class="spec-value">1957 – Present</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label">Publisher</div>
+            <div class="spec-value">JMR Books</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-label">Format</div>
+            <div class="spec-value">Paperback & Digital</div>
+          </div>
+        </div>
       </div>
-      <button type="submit" class="btn">Email Jean</button>
-      <p class="form-note">Opens your email app with this message, addressed to Jean at <span id="email-address"></span>.</p>
-    </form>
-  </div>
-</section>
+    </div>
+  </section>
 
-<footer>
-  <div class="wrap">
-    <div class="publisher">JMR Books</div>
-    <p class="copyright">&copy; 2026 Jean Récapet. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- ============================================================
+       4. "THE STORY" SECTION
+       ============================================================ -->
+  <section id="story" class="story-section">
+    <div class="wrap story-split-grid">
+      
+      <div class="story-left-editorial reveal-left">
+        <div class="eyebrow">The Narrative</div>
+        <h2 class="editorial-quote-headline">
+          &ldquo;Some places become part of <em>who we are</em>.&rdquo;
+        </h2>
 
-<script src="script.js"></script>
+        <div class="framed-gold">
+          <p style="font-family: var(--font-editorial); font-size: 1.15rem; font-style: italic; color: var(--gold-dark); margin: 0;">
+            Set in the medieval town of Sauveterre-de-Béarn, where riverbanks and ruined castles hold the memories of youth.
+          </p>
+        </div>
+
+        <div class="vintage-photo-frame">
+          <img src="assets/france_map_sketch.jpg" alt="Sauveterre-de-Béarn medieval bridge and tower illustration">
+          <div class="photo-caption">Sauveterre-de-Béarn — The Gave d'Oloron</div>
+        </div>
+      </div>
+
+      <div class="story-right-copy reveal-right delay-1">
+        <p class="dropcap">
+          <em>Safe Ground</em> is a memoir of childhood, memory, and belonging, set in the medieval town of Sauveterre-de-Béarn in southwestern France. Born into the long shadow of World War II and raised among family stories, village legends, riverbanks, ruined castles, shopkeepers, neighbors, and lifelong friends, Jean Récapet looks back on the first twenty years of his life with tenderness, humor, and hard-won clarity.
+        </p>
+        <p>
+          From the tidal waters of the Garonne in Bordeaux to the gave d'Oloron below Magendie, from boarding school and wartime scars to boyhood mischief, fear, wonder, and freedom, this memoir preserves a vanished world that shaped him before America became home.
+        </p>
+        <p>
+          At once intimate and historical, <em>Safe Ground</em> is a love letter to family, friendship, place, and the memories that remain bright enough to guide us across a lifetime.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. FRANCE → UNITED STATES VISUAL JOURNEY
+       ============================================================ -->
+  <section id="journey" class="journey-section">
+    <div class="wrap">
+      <div class="eyebrow center reveal-up">Visual Journey</div>
+      <h2 class="center reveal-up delay-1">Two Continents, One Lifetime</h2>
+      <p class="center reveal-up delay-2" style="max-width: 620px; margin: 0 auto; color: rgba(248, 244, 235, 0.75);">
+        Follow Jean Récapet's transatlantic arc—from boyhood in the foothills of the Pyrenees to fifty years of life in the United States.
+      </p>
+
+      <div class="journey-timeline-wrapper">
+        <svg class="journey-svg-line" viewBox="0 0 4 600" preserveAspectRatio="none">
+          <line class="journey-line-path" x1="2" y1="0" x2="2" y2="600" />
+        </svg>
+
+        <!-- Node 1: France -->
+        <div class="journey-node reveal-up">
+          <div class="journey-card-content">
+            <div class="journey-year">1957 – 1977 &bull; FRANCE</div>
+            <h3 class="journey-title">Sauveterre-de-Béarn</h3>
+            <p>
+              Growing up in southwestern France under the shadow of World War II. Riverbanks, medieval towers, schoolyards, and the deep roots of family heritage.
+            </p>
+          </div>
+          <div class="journey-center-badge">01</div>
+          <div class="journey-visual-node">
+            <img src="assets/back_cover.png" alt="Stone bridge and medieval tower of Sauveterre-de-Béarn">
+          </div>
+        </div>
+
+        <!-- Node 2: Transatlantic Journey -->
+        <div class="journey-node reveal-up delay-1">
+          <div class="journey-visual-node">
+            <img src="assets/paper_texture.jpg" alt="Atlantic crossing memory texture">
+          </div>
+          <div class="journey-center-badge">02</div>
+          <div class="journey-card-content">
+            <div class="journey-year">SEPTEMBER 5, 1977 &bull; THE CROSSING</div>
+            <h3 class="journey-title">Arrival in America</h3>
+            <p>
+              Stepping onto American soil at twenty years old with a suitcase of memories kept in a bubble—carrying France in his heart while building a future in the United States.
+            </p>
+          </div>
+        </div>
+
+        <!-- Node 3: United States -->
+        <div class="journey-node reveal-up delay-2">
+          <div class="journey-card-content">
+            <div class="journey-year">1977 – PRESENT &bull; UNITED STATES</div>
+            <h3 class="journey-title">Fifty Years Home</h3>
+            <p>
+              A distinguished career in management across restaurants, country clubs, and bookstores. Settled in Connecticut with partner Tracy and two cats.
+            </p>
+          </div>
+          <div class="journey-center-badge">03</div>
+          <div class="journey-visual-node">
+            <img src="assets/author.png" alt="Portrait of Jean Récapet">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. THEMES SECTION
+       ============================================================ -->
+  <section id="themes" class="themes-section">
+    <div class="wrap">
+      <div class="eyebrow center reveal-up">Core Themes</div>
+      <h2 class="center reveal-up delay-1">Pillars of the Memoir</h2>
+      <p class="center reveal-up delay-2" style="max-width: 580px; margin: 0 auto;">
+        The timeless human themes that weave through the chapters of <em>Safe Ground</em>.
+      </p>
+
+      <div class="themes-grid">
+        
+        <div class="theme-card reveal-up">
+          <div class="theme-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Memory</h3>
+          <div class="theme-quote">&ldquo;A secret garden kept in a bubble, carried as a talisman.&rdquo;</div>
+          <p>The bright, vivid souvenirs of youth preserved unchanged across half a century.</p>
+        </div>
+
+        <div class="theme-card reveal-up delay-1">
+          <div class="theme-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Belonging</h3>
+          <div class="theme-quote">&ldquo;French in my heart. American in my guts.&rdquo;</div>
+          <p>Navigating dual identities and discovering safe ground across two continents.</p>
+        </div>
+
+        <div class="theme-card reveal-up delay-2">
+          <div class="theme-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Family & Heritage</h3>
+          <div class="theme-quote">&ldquo;Raised in the long shadow of World War II.&rdquo;</div>
+          <p>Generational stories, village legends, and the enduring strength of kin.</p>
+        </div>
+
+        <div class="theme-card reveal-up delay-3">
+          <div class="theme-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Friendship</h3>
+          <div class="theme-quote">&ldquo;Lifelong bonds formed on riverbanks.&rdquo;</div>
+          <p>Boyhood mischief, shared laughter, and companions who remain bright across time.</p>
+        </div>
+
+        <div class="theme-card reveal-up">
+          <div class="theme-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Home</h3>
+          <div class="theme-quote">&ldquo;Preserving a vanished world.&rdquo;</div>
+          <p>From the medieval stone towers of Béarn to a serene life in Connecticut.</p>
+        </div>
+
+        <div class="theme-card reveal-up delay-1">
+          <div class="theme-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Place & Memory</h3>
+          <div class="theme-quote">&ldquo;The gave d'Oloron below Magendie.&rdquo;</div>
+          <p>How landscape, rivers, and physical places imprint upon our soul forever.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. BOOK EXCERPT SECTION
+       ============================================================ -->
+  <section id="excerpt" class="excerpt-section">
+    <div class="wrap">
+      <div class="eyebrow center reveal-up">A Page From the Memoir</div>
+      <h2 class="center reveal-up delay-1">In Jean's Words</h2>
+
+      <div class="book-page-spread reveal-scale delay-2">
+        <div class="page-header-label">SAFE GROUND &bull; MEMOIR EXCERPT</div>
+
+        <blockquote class="excerpt-blockquote">
+          &ldquo;The French part is a secret garden of memories, and this book is about that. They are souvenirs kept in a bubble; a time capsule I carry as a talisman for rainy days. They remain bright, vivid, and unchanged.&rdquo;
+        </blockquote>
+
+        <div class="excerpt-source">— Jean Récapet</div>
+
+        <div class="excerpt-cta-wrapper">
+          <a href="#purchase" class="btn-primary">
+            <span>Continue the Journey</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. AUTHOR SECTION
+       ============================================================ -->
+  <section id="author" class="author-section">
+    <div class="wrap author-magazine-grid">
+      
+      <div class="author-portrait-container reveal-left">
+        <div class="author-portrait-frame">
+          <img src="assets/author.png" alt="Portrait of author Jean Récapet">
+        </div>
+      </div>
+
+      <div class="author-bio-content reveal-right delay-1">
+        <div class="eyebrow">The Author</div>
+        <h2>Jean Récapet</h2>
+        <div class="author-title-sub">Author of Safe Ground</div>
+
+        <div class="author-bio-text">
+          <p>
+            Jean Récapet arrived in the United States from southwestern France on September 5, 1977, and has called America home ever since. To mark fifty years in his adopted country, he looks back on the first two decades of his life in Béarn, Sauveterre, and the Pyrénées in his vivid coming-of-age memoir, <em>Safe Ground</em>.
+          </p>
+          <p>
+            After a few years in college, he built a long career in management in the service industry—from restaurants and country clubs to bookstores—where his love of people, stories, and hospitality found a natural home.
+          </p>
+          <p>
+            Now, he offers this book as a gift and a thank-you to all those on both sides of the Atlantic who have shaped his life. He lives in Connecticut with his partner Tracy and their two cats.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. BOOK PURCHASE SECTION ("BOOK ON A TABLE")
+       ============================================================ -->
+  <section id="purchase" class="purchase-section">
+    <div class="wrap purchase-layout-grid">
+      
+      <div class="purchase-info-content reveal-left">
+        <div class="eyebrow">Get Your Copy</div>
+        <h2>Claim Your Copy of Safe Ground</h2>
+        <p style="color: rgba(248, 244, 235, 0.8);">
+          <em>Safe Ground</em> is available in paperback, hardcover, and digital formats through major online retailers and independent bookstores worldwide.
+        </p>
+
+        <!-- Retailers list populated by script.js -->
+        <div class="retailers-cards-grid" id="retailers-grid"></div>
+      </div>
+
+      <div class="purchase-visual-table reveal-scale delay-1">
+        <div class="framed-gold" style="background: var(--dark-card); text-align: center; padding: 3rem 2rem;">
+          <h3 style="color: var(--gold-bright); margin-bottom: 0.5rem;">Safe Ground</h3>
+          <p style="color: rgba(248, 244, 235, 0.7); font-style: italic; margin-bottom: 1.5rem;">
+            Growing up French in Salva Terra
+          </p>
+          <div style="font-family: var(--font-editorial); font-size: 1.2rem; color: var(--parchment); margin-bottom: 2rem;">
+            &ldquo;A gift and a thank-you to all those on both sides of the Atlantic.&rdquo;
+          </div>
+          <a href="#contact" class="btn-primary" style="width: 100%; justify-content: center;">
+            <span>Contact Author for Signed Copies</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       11. CONTACT SECTION
+       ============================================================ -->
+  <section id="contact" class="contact-section">
+    <div class="wrap">
+      <div class="eyebrow center reveal-up">Direct Correspondence</div>
+      <h2 class="center reveal-up delay-1">Get in Touch With Jean</h2>
+      <p class="center reveal-up delay-2" style="max-width: 540px; margin: 0 auto 3rem;">
+        Send a note directly to Jean Récapet. Whether to share a story, ask about the memoir, or request a reading.
+      </p>
+
+      <div class="contact-card-frame reveal-scale delay-3">
+        
+        <!-- Social links populated by script.js -->
+        <ul class="social-links-row" id="social-row"></ul>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="contact-name" class="form-label">Your Name</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="e.g. Marie Laurent" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Your Message</label>
+            <textarea id="contact-message" class="form-textarea" rows="5" placeholder="Share your message with Jean..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;">
+            <span>Email Jean</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+
+          <p class="form-note">
+            Opens your default mail application addressed directly to <span id="email-address"></span>.
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top-grid">
+        <div class="footer-publisher-brand">JMR BOOKS</div>
+        <button class="btn-back-top" id="btn-back-top" aria-label="Back to Top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Jean Récapet. All rights reserved.</div>
+        <div>Safe Ground: Growing up French in Salva Terra</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
