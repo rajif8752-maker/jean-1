@@ -7,23 +7,25 @@
 const RECIPIENT_EMAIL = "jeanrecapet@gmail.com";
 
 const BUY_LINKS = [
-  { name: "Barnes & Noble", format: "Hardcover & Paperback", url: "#", icon: "storefront" },
-  { name: "Amazon",         format: "Kindle & Paperback",    url: "#", icon: "cart" },
-  { name: "IngramSpark",    format: "Independent Retailers", url: "#", icon: "book" },
+  { name: "Barnes & Noble", format: "Hardcover & Paperback", url: "https://www.barnesandnoble.com/", icon: "storefront" },
+  { name: "Amazon",         format: "Kindle & Paperback",    url: "https://www.amazon.com/", icon: "cart" },
+  { name: "IngramSpark",    format: "Independent Retailers", url: "https://www.ingramspark.com/", icon: "book" },
 ];
 
 const SOCIAL_LINKS = [
-  { name: "Instagram", url: "#", icon: "instagram" },
-  { name: "Facebook",  url: "#", icon: "facebook" },
+  { name: "Email", url: "mailto:jeanrecapet@gmail.com", icon: "email" },
+  { name: "Instagram", url: "https://www.instagram.com/jeanrecapet/", icon: "instagram" },
+  { name: "Facebook", url: "https://www.facebook.com/profile.php?id=100078391781450", icon: "facebook" },
 ];
 
 /* SVG Icon Library */
 const ICONS = {
   storefront: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0"/><path d="M5 9v10h14V9"/><path d="M9 19v-6h6v6"/></svg>',
-  cart:       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>',
-  book:       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/></svg>',
-  instagram:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>',
-  facebook:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8.5h2V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H9v3h2v6h3v-6h2.4l.6-3H14V9a.5.5 0 0 1 .5-.5z"/></svg>',
+  cart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/></svg>',
+  email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="M4 8l8 6 8-6"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8.5h2V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H9v3h2v6h3v-6h2.4l.6-3H14V9a.5.5 0 0 1 .5-.5z"/></svg>',
   arrowRight: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>'
 };
 
