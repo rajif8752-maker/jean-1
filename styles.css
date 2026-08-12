@@ -526,7 +526,7 @@ nav {
 .book-cover-front {
   position: absolute;
   inset: 0;
-  background-image: url('assets/cover.jpg');
+  background-image: url('assets/Front-Cover.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 2px 6px 6px 2px;
